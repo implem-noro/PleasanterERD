@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?><database name="Implem.PleasanterERD" schema="dbo" type="Microsoft SQL Server - 15.00.2095">
+   <tables>
+      <table catalog="Implem.PleasanterERD" name="WBS（Issues_2）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（IssueId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="WBS（ClassA）" foreignKey="FK_4_ClassA_2" implied="false" onDeleteCascade="false" schema="dbo" table="レビュー記録（Results_4）"/>
+            <child catalog="Implem.PleasanterERD" column="WBS（ClassA）" foreignKey="FK_3_ClassA_2" implied="false" onDeleteCascade="false" schema="dbo" table="課題管理（Issues_3）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="開始（StartTime）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="完了（CompletionTime）" nullable="false" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="作業量（WorkValue）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="1" id="7" name="進捗率（ProgressRate）" nullable="true" remarks="" size="6" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="残作業量（RemainingWorkValue）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="作業工程（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="作業内容（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="機能分類（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="16" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（IssueId）" sequenceNumberInPK="1"/>
+         <index name="PK__2__3214EC07F4F76539" unique="true">
+            <column ascending="true" name="ID（IssueId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="クレーム管理（Results_39）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="お客様氏名（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="発生日時（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="対応者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="種別（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="クレーム内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="対応・処置内容（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__39__3214EC07BD647466" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="シフト表（Results_37）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="作業種別（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="開始（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="終了（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__37__3214EC07E2A22129" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="セキュリティチェック表（Results_41）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="対象月（ClassA）" foreignKey="FK_42_ClassA_41" implied="false" onDeleteCascade="false" schema="dbo" table="担当者入力（Results_42）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="対象月（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="開始日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="6" name="終了日（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="7" name="部員数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="完了人数（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="9" name="未完了人数（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__41__3214EC0755196A66" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="タスク引継ぎ表（Issues_35）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（IssueId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="種別（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="開始（StartTime）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="6" name="完了（CompletionTime）" nullable="false" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="起票者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（IssueId）" sequenceNumberInPK="1"/>
+         <index name="PK__35__3214EC07865F93A1" unique="true">
+            <column ascending="true" name="ID（IssueId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="レビュー記録（Results_4）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="WBS（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（IssueId）" foreignKey="FK_4_ClassA_2" implied="false" onDeleteCascade="false" schema="dbo" table="WBS（Issues_2）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="指摘区分（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__4__3214EC07EDC2DBED" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="交通費精算表（Results_18）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="2" name="利用日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="利用者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="目的地（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="出発地（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="帰着地（ClassH）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="出張理由（ClassE）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="金額（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__18__3214EC07328A71BE" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="介護ヒヤリハット集（Results_30）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="件名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="作成日（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="作成者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="承認者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="利用者名（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="8" name="発生日時（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="発生場所（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="種別（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="発生原因・解決方法（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__30__3214EC070CD796EE" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="仕入（Results_8）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="商談（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（IssueId）" foreignKey="FK_8_ClassA_7" implied="false" onDeleteCascade="false" schema="dbo" table="商談（Issues_7）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="件名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="金額（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__8__3214EC0746B45431" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="利用台帳（Results_14）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="商品分類（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_14_ClassA_12" implied="false" onDeleteCascade="false" schema="dbo" table="消耗品管理（Results_12）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="利用日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="所属（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="個数（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="利用者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__14__3214EC076BD8FE6C" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="勉強会リスト（Results_25）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="勉強会名（ClassA）" foreignKey="FK_26_ClassA_25" implied="false" onDeleteCascade="false" schema="dbo" table="参加者一覧（Results_26）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="件名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="6" name="開始時間（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="7" name="終了時間（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="場所（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="9" name="募集開始（DateC）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="10" name="募集終了（DateD）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="11" name="定員（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="12" name="申込人数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="備考（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__25__3214EC075815B1DC" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="参加者一覧（Results_26）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="勉強会名（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_26_ClassA_25" implied="false" onDeleteCascade="false" schema="dbo" table="勉強会リスト（Results_25）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="フリガナ（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="氏名（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="電話番号（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="メールアドレス（ClassE）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__26__3214EC07912BD9CA" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="受け付け台帳（Issues_10）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（IssueId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="開始（StartTime）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="完了（CompletionTime）" nullable="false" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="緊急度（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="内容区分（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="機能区分（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="依頼者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="対応者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（IssueId）" sequenceNumberInPK="1"/>
+         <index name="PK__10__3214EC074921DF4B" unique="true">
+            <column ascending="true" name="ID（IssueId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="商品一覧（Results_50）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="商品名（ClassB）" foreignKey="FK_51_ClassB_50" implied="false" onDeleteCascade="false" schema="dbo" table="売上管理台帳（Results_51）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="商品名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="3" name="単価（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="4" name="総数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="売上合計（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__50__3214EC070D9EB825" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="商談（Issues_7）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（IssueId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="商談（ClassA）" foreignKey="FK_8_ClassA_7" implied="false" onDeleteCascade="false" schema="dbo" table="仕入（Results_8）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="顧客（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_7_ClassA_6" implied="false" onDeleteCascade="false" schema="dbo" table="顧客マスタ（Results_6）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="件名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="商品区分（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="確度（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="7" name="受注予定日（CompletionTime）" nullable="false" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="売上（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="9" name="仕入合計（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="10" name="粗利（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="11" name="粗利率（NumD）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="16" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（IssueId）" sequenceNumberInPK="1"/>
+         <index name="PK__7__3214EC078EA4AE2E" unique="true">
+            <column ascending="true" name="ID（IssueId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="営業日報（Results_16）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="2" name="日報作成日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="所属（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="営業担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="承認者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="目標達成度（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="作業内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="所感・学び（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="10" name="顧客先訪問（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="11" name="資料作成（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="12" name="移動（NumD）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="13" name="社内業務（NumE）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="14" name="その他（NumF）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="15" name="作業時間合計（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="16" name="顧客対応割合（NumG）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="17" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="18" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__16__3214EC075F29372B" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="売上管理台帳（Results_51）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="2" name="日付（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="店舗名（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_51_ClassA_49" implied="false" onDeleteCascade="false" schema="dbo" table="店舗一覧（Results_49）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="商品名（ClassB）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_51_ClassB_50" implied="false" onDeleteCascade="false" schema="dbo" table="商品一覧（Results_50）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="単価（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="個数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="7" name="金額（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__51__3214EC07E9558F5C" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="店舗一覧（Results_49）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="店舗名（ClassA）" foreignKey="FK_51_ClassA_49" implied="false" onDeleteCascade="false" schema="dbo" table="売上管理台帳（Results_51）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="店舗名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="郵便番号（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="都道府県（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="住所（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="電話番号（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="責任者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="売上合計（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__49__3214EC077391C971" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="成績管理（Results_32）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="評価期間（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="面談日程（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="担当者（ClassB）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="目標達成/未達成（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="目標（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="結果報告（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="上司フィードバック（DescriptionB）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="11" name="姿勢（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="12" name="段取り（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="13" name="勤務態度（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="14" name="能力（NumD）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="15" name="成果（NumE）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="16" name="ポイント合計（NumF）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="17" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="18" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__32__3214EC0721D89197" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="担当者一覧（Results_33）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="所属（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="担当者名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="管理職名（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="ポイント平均（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__33__3214EC071C2EDFF0" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="担当者入力（Results_42）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="対象月（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_42_ClassA_41" implied="false" onDeleteCascade="false" schema="dbo" table="セキュリティチェック表（Results_41）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="チェック日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="社員証の有無（CheckA）" nullable="true" remarks="" size="1" type="bit" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="顧客預りカードの有無（CheckB）" nullable="true" remarks="" size="1" type="bit" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="社給携帯の有無（CheckC）" nullable="true" remarks="" size="1" type="bit" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="PCのセキュリティ対策（CheckD）" nullable="true" remarks="" size="1" type="bit" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__42__3214EC07C488DD1F" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="故障管理表（Results_21）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="設備名（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_21_ClassA_20" implied="false" onDeleteCascade="false" schema="dbo" table="設備一覧（Results_20）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="設置場所（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="発生日時（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="復旧日時（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="修理担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="故障内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="故障原因（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="修理内容（DescriptionB）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__21__3214EC07965732E2" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="書籍管理（Results_53）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="ISBN（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="著者（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="出版社（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="種類（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="7" name="購入日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="値段（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="既読（CheckA）" nullable="true" remarks="" size="1" type="bit" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="感想（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__53__3214EC070F3A1FE4" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="来訪者記録簿（Results_47）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="2" name="日時（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="企業名/団体名（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="お名前（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="ご予約（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__47__3214EC07EAF42680" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="消耗品管理（Results_12）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="商品分類（ClassA）" foreignKey="FK_14_ClassA_12" implied="false" onDeleteCascade="false" schema="dbo" table="利用台帳（Results_14）"/>
+            <child catalog="Implem.PleasanterERD" column="商品分類（ClassA）" foreignKey="FK_13_ClassA_12" implied="false" onDeleteCascade="false" schema="dbo" table="購入台帳（Results_13）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="種別（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="在庫合計（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="7" name="仕入合計（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="利用合計（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="9" name="金額合計（NumD）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__12__3214EC07F204BF1F" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="生産管理表（Results_45）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="製品名（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_45_ClassA_44" implied="false" onDeleteCascade="false" schema="dbo" table="製品一覧（Results_44）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="日付（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="稼働時間（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="生産数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="7" name="単価（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="精算金額（NumD）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="9" name="生産率（NumE）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__45__3214EC0798A64074" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="稟議申請（Results_57）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="承認段階（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="回答者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="回答（DescriptionE）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="回送元（ClassE）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="回送元コメント（DescriptionH）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="申請者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="申請部門（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="8" name="申請日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="件名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="10" name="金額（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="内訳（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="起案理由（DescriptionA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="証憑（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="担当課長（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="15" name="課長承認日（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="16" name="課長コメント（DescriptionB）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="17" name="担当部長（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="18" name="部長承認日（DateC）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="19" name="部長コメント（DescriptionC）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="20" name="担当役員（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="21" name="役員承認日（DateD）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="22" name="役員コメント（DescriptionD）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="23" name="経理担当（ClassF）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="24" name="経理処理日（DateE）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__57__3214EC078F0067C7" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="製品一覧（Results_44）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="製品名（ClassA）" foreignKey="FK_45_ClassA_44" implied="false" onDeleteCascade="false" schema="dbo" table="生産管理表（Results_45）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="製品名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="3" name="総稼働時間（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="4" name="総生産数（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="総生産金額（NumC）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__44__3214EC07BD5AC483" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="設備一覧（Results_20）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="設備名（ClassA）" foreignKey="FK_21_ClassA_20" implied="false" onDeleteCascade="false" schema="dbo" table="故障管理表（Results_21）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="種別（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="設備名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="所属（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="設備管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="連絡先（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="7" name="故障回数（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__20__3214EC076518E1A3" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="課題管理（Issues_3）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（IssueId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="タイトル（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="開始（StartTime）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="5" name="完了（CompletionTime）" nullable="false" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="作業量（WorkValue）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="1" id="7" name="進捗率（ProgressRate）" nullable="true" remarks="" size="6" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="8" name="残作業量（RemainingWorkValue）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="WBS（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（IssueId）" foreignKey="FK_3_ClassA_2" implied="false" onDeleteCascade="false" schema="dbo" table="WBS（Issues_2）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="13" name="区分（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="14" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="15" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（IssueId）" sequenceNumberInPK="1"/>
+         <index name="PK__3__3214EC070A1F1103" unique="true">
+            <column ascending="true" name="ID（IssueId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="議事録管理（Results_28）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="会議名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="開始（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="4" name="終了（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="開催場所（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="作成者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="承認者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="内容（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__28__3214EC0782350EDA" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="購入台帳（Results_13）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="商品分類（ClassA）" nullable="true" remarks="" size="4" type="int" typeCode="4">
+            <parent catalog="Implem.PleasanterERD" column="ID（ResultId）" foreignKey="FK_13_ClassA_12" implied="false" onDeleteCascade="false" schema="dbo" table="消耗品管理（Results_12）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="3" name="購入日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="購入店名（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="5" name="個数（NumA）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="4" id="6" name="金額（NumB）" nullable="true" remarks="" size="21" type="decimal" typeCode="3"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="購入者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__13__3214EC0729137B90" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="鍵管理台帳（Results_55）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="鍵番号（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="種類（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="管理者（Manager）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="利用者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="状況（Status）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="7" name="利用開始日（DateA）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="3" id="8" name="返却日（DateB）" nullable="true" remarks="" size="16" type="datetime" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__55__3214EC07203B71F9" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="顧客マスタ（Results_6）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4">
+            <child catalog="Implem.PleasanterERD" column="顧客（ClassA）" foreignKey="FK_7_ClassA_6" implied="false" onDeleteCascade="false" schema="dbo" table="商談（Issues_7）"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="顧客名（Title）" nullable="false" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="住所（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="連絡先（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="担当者（Owner）" nullable="true" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__6__3214EC071043D8B1" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+      <table catalog="Implem.PleasanterERD" name="顧客名簿（Results_23）" numRows="0" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ID（ResultId）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="バージョン（Ver）" nullable="false" remarks="" size="4" type="int" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="フリガナ（ClassA）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="氏名（ClassB）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="郵便番号（ClassC）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="都道府県（ClassG）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="住所（ClassD）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="電話番号（ClassE）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="メールアドレス（ClassF）" nullable="true" remarks="" size="2048" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="備考（Body）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="添付資料（AttachmentsA）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="コメント（Comments）" nullable="true" remarks="" size="2147483647" type="nvarchar" typeCode="-9"/>
+         <primaryKey column="ID（ResultId）" sequenceNumberInPK="1"/>
+         <index name="PK__23__3214EC075A024E6F" unique="true">
+            <column ascending="true" name="ID（ResultId）"/>
+         </index>
+      </table>
+   </tables>
+</database>
